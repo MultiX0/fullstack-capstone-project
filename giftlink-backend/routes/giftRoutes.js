@@ -1,9 +1,8 @@
-/* jshint esversion: 6 */
+/* jshint esversion: 8 */ 
 const express = require('express');
 const router = express.Router();
 const connectToDatabase = require("../models/db");
 
-/* jshint esversion: 8 */ 
 router.get('/', async (req, res) => {
     try {
         // Task 1: Connect to MongoDB and store connection to db constant
@@ -22,7 +21,7 @@ router.get('/', async (req, res) => {
         res.status(500).send('Error fetching gifts');
     }
 });
-/* jshint esversion: 8 */ 
+
 router.get('/:id', async (req, res) => {
     try {
         // Task 1: Connect to MongoDB and store connection to db constant
@@ -51,7 +50,6 @@ router.get('/:id', async (req, res) => {
 
 
 
-/* jshint esversion: 8 */ 
 router.post('/', async (req, res, next) => {
     try {
         const db = await connectToDatabase();
