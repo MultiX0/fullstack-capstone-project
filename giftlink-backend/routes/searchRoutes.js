@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
 
         // Initialize the query object
         let query = {};
-        req.query.name>req.query.name && req.query.name.trim() !== ''
+        req.query.name>req.query.name && req.query.name.trim() !== '';
 
         // Add the name filter to the query if the name parameter is not empty
         // if (/* {{insert code here}} */) {
