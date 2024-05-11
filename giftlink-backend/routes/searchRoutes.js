@@ -17,9 +17,10 @@ router.get('/', async (req, res, next) => {
         req.query.name>req.query.name && req.query.name.trim() !== '';
 
         // Add the name filter to the query if the name parameter is not empty
-        // if (/* {{insert code here}} */) {
-            query.name = { $regex: req.query.name, $options: "i" }; // Using regex for partial match, case-insensitive
-        // }
+       if (req.query.name && req.query.name.trim() !== '') {
+    query.name = { $regex: req.query.name, $options: "i" };
+}
+
 
         // Task 3: Add other filters to the query
         if (req.query.category) {
