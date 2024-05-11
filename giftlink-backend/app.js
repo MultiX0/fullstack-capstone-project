@@ -52,8 +52,8 @@ app.use((err, req, res, next) => {
 app.use('/api/auth', authRoutes);
 
 app.get("/",(req,res)=>{
-    res.send("Inside the server")
-})
+    res.send("Inside the server");
+});
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
