@@ -28,6 +28,7 @@ const giftRoutes = require('./routes/giftRoutes');
 // Search API Task 1: import the searchRoutes and store in a constant called searchRoutes
 const searchRoutes = require('./routes/searchRoutes');
 
+const authRoutes = require('./routes/authRoutes');
 
 const pinoHttp = require('pino-http');
 const logger = require('./logger');
@@ -47,6 +48,8 @@ app.use((err, req, res, next) => {
     console.error(err);
     res.status(500).send('Internal Server Error');
 });
+
+app.use('/api/auth', authRoutes);
 
 app.get("/",(req,res)=>{
     res.send("Inside the server")
