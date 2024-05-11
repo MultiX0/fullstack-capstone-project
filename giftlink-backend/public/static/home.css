@@ -1,0 +1,60 @@
+/* Task 1: Style the body */
+body {
+    /* insert code here */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f4f4f4;
+}
+
+/* Task 2: Create a pseudo-element for the background and blur */
+body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://unblast.com/wp-content/uploads/2021/01/Space-Background-Images.jpg");
+    filter: blur(8px);
+}
+
+/* Task 3: Style the content area */
+.content {
+    /* insert code here */
+    position: relative;
+    z-index: -1;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    max-width: 800px;
+}
+
+h2 {
+    /* insert code here */
+    font-size: 24px;
+    color: #333;
+}
+
+h1 {
+    /* insert code here */
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff9;
+}
+
+.lead{
+    color:grey;
+    font-size: 18px;
+}
+
+/* Task 4: Add styles for headings, paragraphs, and buttons */
+.btn-primary{
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+}
